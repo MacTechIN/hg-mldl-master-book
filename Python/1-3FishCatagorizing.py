@@ -83,7 +83,11 @@ from sklearn.neighbors import KNeighborsClassifier
 #%%
 # 두 데이터를 넣고 지도 학습 시킨다. 
 
-kn = KNeighborsClassifier()
+kn = KNeighborsClassifier() #기본 값은 5이다. 
+
+#fish_data : 도미 + 빙어 의 2차원 배열 
+#finish_target : 1,0 으로 도미와 빙어를 의미함.(답) 
+
 kn.fit(fish_data, fish_target)
 #
 #%%
@@ -91,9 +95,15 @@ kn.fit(fish_data, fish_target)
 
 kn.score(fish_data, fish_target)
 
+#%% 
+# 새로운 ㅇ생선 예측 
 
+# 2차원 데이터 로 입력 해야함. 
+predict = kn.predict([[30,600]])
+#사이킷 이 넘파이 어레이임. 
+#%%
 
-
+print(predict) # 1(도미) 을 리턴 한다. 
 
 
 

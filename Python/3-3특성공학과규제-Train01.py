@@ -97,8 +97,7 @@ lr.fit(train_poly, train_target)
 lr.score(train_poly, train_target)
 #%%
 
-lr.score(test_poly, test_target)
-
+lr.score(test_poly, test_target)3
 #%%
 
 
